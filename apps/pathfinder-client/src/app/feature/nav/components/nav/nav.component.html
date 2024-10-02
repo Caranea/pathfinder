@@ -1,0 +1,344 @@
+<header class="shrink-0 bg-gray-900">
+  <nav>
+    <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="flex items-center px-2 lg:px-0">
+          <div class="flex-shrink-0">
+            <img
+              class="h-8 w-auto"
+              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+              alt="Your Company"
+            />
+          </div>
+          <div class="hidden lg:ml-6 lg:block">
+            <div class="flex space-x-4 text-gray-300 cursor-default">
+              <a
+                routerLink="/"
+                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium hover:text-white"
+                [class.text-white]="activeTab === 'home'"
+                [class.hover:bg-gray-700]="activeTab !== 'home'"
+                [class.cursor-pointer]="activeTab !== 'home'"
+                (click)="activeTab = 'home'"
+                >{{ 'nav.home' | translate }}</a
+              >
+              <a
+                routerLink="/"
+                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium hover:text-white"
+                [class.text-white]="activeTab === 'page2'"
+                [class.hover:bg-gray-700]="activeTab !== 'page2'"
+                [class.cursor-pointer]="activeTab !== 'page2'"
+                (click)="activeTab = 'page2'"
+                >{{ 'nav.example' | translate }}</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
+          <div class="flex-shrink-0 mr-2">
+            <button
+              type="button"
+              class="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            >
+              <svg
+                class="-ml-0.5 h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
+                />
+              </svg>
+              {{
+                'nav.action' | translate
+              }}
+            </button>
+          </div>
+          <div class="w-full max-w-lg lg:max-w-xs">
+            <label for="search" class="sr-only">{{
+              'nav.search' | translate
+            }}</label>
+            <div class="relative">
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+              >
+                <svg
+                  class="h-5 w-5 text-gray-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <input
+                id="search"
+                name="search"
+                class="block w-full rounded-md border-0 bg-gray-700 py-1.5 pl-10 pr-3 text-gray-300 placeholder:text-gray-400 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
+                placeholder="{{
+                  'nav.search' | translate
+                }}"
+                type="search"
+                required
+                [(ngModel)]="searchInput"
+                (input)="search()"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            (click)="mobileMenuVisible = !mobileMenuVisible"
+          >
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">{{ 'nav.open_main_menu' | translate }}</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              [class.hidden]="mobileMenuVisible"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <svg
+              class="h-6 w-6"
+              [class.hidden]="!mobileMenuVisible"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:ml-4 lg:block">
+          <div class="flex items-center">
+            <button
+              type="button"
+              class="relative flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">{{
+                'nav.view_notifications' | translate
+              }}</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                />
+              </svg>
+            </button>
+
+            <div class="relative ml-4 flex-shrink-0">
+              <div>
+                <button
+                  type="button"
+                  class="relative flex rounded-full bg-gray-800 text-sm text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  id="user-menu-button"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  (click)="dropdownMenuVisible = !dropdownMenuVisible"
+                  (clickOutside)="dropdownMenuVisible = false"
+                >
+                  <span class="absolute -inset-1.5"></span>
+                  <span class="sr-only">{{
+                    'nav.open_user_menu' | translate
+                  }}</span>
+                  @if (user?.imageUrl){
+                  <img
+                    class="h-8 w-8 rounded-full"
+                    [src]="user?.imageUrl"
+                    alt="Profile Image"
+                  />} @else {
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -960 960 960"
+                    class="h-8 w-8 p-1"
+                    fill="rgb(156 163 175)"
+                  >
+                    <path
+                      d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+                    />
+                  </svg>
+                  }
+                </button>
+              </div>
+              <div
+                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-button"
+                tabindex="-1"
+                *ngIf="dropdownMenuVisible && user"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 cursor-pointer"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-0"
+                  >{{ 'nav.your_profile' | translate }}</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 cursor-pointer"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-1"
+                  >{{ 'nav.settings' | translate }}</a
+                >
+                <a
+                  class="block px-4 py-2 text-sm text-gray-700 cursor-pointer"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-2"
+                  (click)="signOut()"
+                  >{{ 'nav.sign_out' | translate }}</a
+                >
+              </div>
+              <div
+                class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="user-menu-button"
+                tabindex="-1"
+                *ngIf="dropdownMenuVisible && !user"
+              >
+                <a
+                  routerLink="/auth/register"
+                  class="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-0"
+                  >{{ 'nav.register' | translate }}</a
+                >
+                <a
+                  routerLink="/auth/login"
+                  class="block px-4 py-2 text-sm text-gray-700"
+                  role="menuitem"
+                  tabindex="-1"
+                  id="user-menu-item-0"
+                  >{{ 'nav.sign_in' | translate }}</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:hidden" id="mobile-menu" *ngIf="mobileMenuVisible">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <a
+          routerLink="/"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          [class.text-white]="activeTab === 'home'"
+          [class.hover:bg-gray-900]="activeTab === 'home'"
+          [class.cursor-pointer]="activeTab !== 'home'"
+          (click)="activeTab = 'home'"
+          >{{ 'nav.home' | translate }}</a
+        >
+        <a
+          routerLink="/"
+          class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+          [class.text-white]="activeTab === 'page2'"
+          [class.hover:bg-gray-900]="activeTab === 'page2'"
+          [class.cursor-pointer]="activeTab !== 'page2'"
+          (click)="activeTab = 'page2'"
+          >{{ 'nav.example' | translate }}</a
+        >
+      </div>
+      <div class="border-t border-gray-700 pb-3 pt-4">
+        <div class="flex items-center px-5">
+          <div class="flex-shrink-0">
+            <img
+              class="h-10 w-10 rounded-full"
+              [src]="user?.imageUrl"
+              alt="Profile Image"
+            />
+          </div>
+          <div class="ml-3">
+            <div
+              *ngIf="user?.username"
+              class="text-base font-medium text-white"
+            >
+              {{ user?.username }}
+            </div>
+            <div class="text-sm font-medium text-gray-400">
+              {{ user?.primaryEmailAddress?.emailAddress }}
+            </div>
+          </div>
+          <button
+            type="button"
+            class="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+          >
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">{{
+              'nav.view_notifications' | translate
+            }}</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-3 space-y-1 px-2">
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+            >{{ 'nav.your_profile' | translate }}</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+            >{{ 'nav.settings' | translate }}</a
+          >
+          <a
+            (click)="signOut()"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+            >{{ 'nav.sign_out' | translate }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

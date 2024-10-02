@@ -1,0 +1,65 @@
+<div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <img
+        class="mx-auto h-10 w-auto"
+        src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+        alt="Your Company"
+      />
+      <h2
+        class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-white"
+      >
+        {{ 'auth.confirm_registration' | translate }}
+      </h2>
+    </div>
+  
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <form class="space-y-6" [formGroup]="confirmForm" (ngSubmit)="onSubmit()">
+        <div>
+          <div class="flex items-center justify-between">
+            <label
+              for="code"
+              class="block text-sm font-medium leading-6 text-white"
+              >{{ 'auth.code' | translate }}</label
+            >
+          </div>
+          <div class="mt-2">
+            <input
+              formControlName="code"
+              id="code"
+              name="code"
+              type="text"
+              required
+              class="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+            />
+          </div>
+          <div *ngIf="displayErrors(confirmForm, 'code')" class="alert">
+            @for (error of getErrors(confirmForm, 'code'); track error) {
+            <span class="text-red-200 text-xs mt-2">{{
+              'auth.validation.' + error | translate
+            }}</span>
+            }
+          </div>
+        </div>
+  
+        <div>
+          <button
+            [disabled]="!confirmForm.valid"
+            type="submit"
+            class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-400 disabled:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+          >
+            {{ 'auth.sign_up' | translate }}
+          </button>
+        </div>
+      </form>
+  
+      <p class="mt-10 text-center text-sm text-gray-400">
+        {{ 'auth.code_not_arrived' | translate }}
+        <a
+          (click)="attemptAgain()"
+          class="cursor-pointer font-semibold leading-6 text-indigo-400 hover:text-indigo-300"
+          >{{ 'auth.try_again' | translate }}</a
+        >
+      </p>
+    </div>
+  </div>
+  

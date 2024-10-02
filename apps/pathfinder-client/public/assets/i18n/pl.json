@@ -1,0 +1,65 @@
+{
+    "shared": {
+        "title": "Pathfinder",
+        "generic_error": "Błąd! Spróbuj ponownie."
+    },
+    "notification": {
+        "failure": "Błąd!",
+        "success": "Sukces!"
+    },
+    "nav": {
+        "home": "Strona główna",
+        "example": "Strona 2",
+        "action": "Akcja",
+        "search": "Szukaj",
+        "open_main_menu":"Otwórz menu główne",
+        "view_notifications": "Zobacz powiadomienia",
+        "open_user_menu": "Otwórz menu użytkownika",
+        "your_profile": "Twój profil",
+        "settings": "Ustawienia",
+        "sign_out": "Wyloguj się",
+        "register": "Zarejestruj się",
+        "sign_in": "Zaloguj się"
+    },
+    "auth": {
+        "login_successful": "Udało się zalogować.",
+        "continue_with": "Lub kontynuuj z",
+        "identifier": "Nazwa użytkownika lub email",
+        "register_account": "Utwórz nowe konto",
+        "email": "Adres e-mail",
+        "password": "Hasło",
+        "reset_password": "Zapomniałeś hasła?",
+        "already_registered": "Masz już konto?",
+        "log_in": "Zaloguj się",
+        "username": "Nazwa użytkownika",
+        "sign_up": "Zarejestruj się",
+        "code": "Kod",
+        "confirm": "Potwierdź",
+        "confirm_registration": "Zweryfikuj swój adres e-mail",
+        "code_not_arrived": "Kod nie dotarł?",
+        "no_acc_yet": "Nie masz jeszcze konta?",
+        "try_again": "Spróbuj ponownie",
+        "error_preparing_verification": "Błąd podczas wysyłania kodu",
+        "error_attempting_verification": "Błąd podczas weryfikacji kodu",
+        "code_sent": "Kod wysłany. Sprawdź skrzynkę e-mail",
+        "verified_success": "Udało się! Zaraz przejdziesz do strony głównej.",
+        "validation": {
+            "strategy_for_user_invalid": "Użyj innej metody logowania",
+            "external_account_exists": "To konto jest już zarejestrowane. Zaloguj się",
+            "form_param_nil": "To pole jest wymagane",
+            "required": "To pole jest wymaganie",
+            "form_username_invalid_character": "Nazwa użytkownika może składać się tylko z cyfr, liter, znaków '_' lub '-'",
+            "form_password_length_too_short": "Hasło musi składać się z minimum 8 znaków",
+            "form_identifier_exists": "Taki użytkownik już istnieje",
+            "form_password_pwned": "To hasło jest na liście wykradzionych haseł",
+            "form_param_format_invalid": "Użyj prawidłowego formatu",
+            "session_exists": "Jesteś już zalogowany",
+            "sign_up_outdated_verification": "Ta weryfikacja wygasła",
+            "sign_up_cannot_be_updated": "Ta próba stworzenia konta nie może być zmodyfikowana",
+            "sign_up_forbidden_access": "Rejestracja zabroniona",
+            "sign_up_not_found": "Nie można odnaleźć aktualnej próby rejestracji",
+            "form_password_incorrect": "Błędne hasło",
+            "form_identifier_not_found": "Nie możemy odnaleźć takiego użytkownika"
+        }
+    }
+}
