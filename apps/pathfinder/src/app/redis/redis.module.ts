@@ -14,8 +14,9 @@ import { RedisCacheService } from './services/redis-cache.service';
                 return {
                     isGlobal: true,
                     store: redisStore,
-                    host: configService.get('HOST'),
-                    port: configService.get('REDIS_PORT')
+                    host: configService.get('REDIS_HOST'),
+                    port: configService.get('REDIS_PORT'),
+                    password: configService.get('REDIS_PASSWORD'),
                 }
             }
         }),
@@ -26,7 +27,7 @@ import { RedisCacheService } from './services/redis-cache.service';
                 return {
                     type: 'single',
                     options: {
-                        host: configService.get('HOST'),
+                        host: configService.get('REDIS_HOST'),
                         port: configService.get('REDIS_PORT'),
                         password: configService.get('REDIS_PASSWORD'),
                         ttl: 21600000, // 6 hours
