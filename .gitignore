@@ -43,4 +43,3 @@ Thumbs.db
 
 .angular
 .env
-apps/pathfinder-client/src/environment/environment.ts
