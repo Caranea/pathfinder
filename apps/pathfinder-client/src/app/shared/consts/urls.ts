@@ -1,5 +1,5 @@
 export const urls = {
-    HOME: '',
+    HOME: 'home',
     AUTH: 'auth',
     REGISTER: 'register',
     CONFIRM: 'confirm',
