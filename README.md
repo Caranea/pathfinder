@@ -4,7 +4,7 @@ Full-stack application skeleton powered by Nest.js, Postgres, and Angular.
 
 <img src="https://i.imgur.com/WVkQ5wK.png"> </img>
 
-<a alt="" href="https://nx.dev](https://pathfind3r.netlify.app/" target="_blank" rel="noreferrer">See live</a>
+<a alt="" href="https://pathfind3r.netlify.app/" target="_blank" rel="noreferrer">See live</a>
 
 ✨ Features ✨
 
