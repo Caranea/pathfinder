@@ -3,6 +3,9 @@
         "title": "Pathfinder",
         "generic_error": "Błąd! Spróbuj ponownie."
     },
+    "home": {
+        "cta": "Miejsce na Twoją aplikację"
+    },
     "notification": {
         "failure": "Błąd!",
         "success": "Sukces!"
