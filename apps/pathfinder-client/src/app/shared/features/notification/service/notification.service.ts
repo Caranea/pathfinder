@@ -25,7 +25,7 @@ export class NotificationService {
 
     setTimeout(() => {
       this.dismissNotification();
-    }, 50000);
+    }, 5000);
   }
 
   public displayNotification() {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Clerk } from '@clerk/clerk-js';
 import { plPL } from '@clerk/localizations';
-import { SessionResource, UserResource, GoogleOauthProvider, FacebookOauthProvider} from '@clerk/types';
+import { SessionResource, UserResource, GoogleOauthProvider, FacebookOauthProvider } from '@clerk/types';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -73,5 +73,20 @@ export class ClerkService {
   public signOut() {
     this.activeSession?.end();
     window.location.reload();
+  }
+
+  public sendResetPasswordCode(email: string) {
+    return this.clerk.client?.signIn.create({
+      strategy: 'reset_password_email_code',
+      identifier: email
+    })
+  }
+
+  public reset(code: string, password: string) {
+    return this.clerk.client?.signIn?.attemptFirstFactor({
+      strategy: 'reset_password_email_code',
+      code, 
+      password
+    })
   }
 }
