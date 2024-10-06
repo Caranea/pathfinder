@@ -71,6 +71,7 @@ export class ClerkService {
   }
 
   public signOut() {
-    return this.activeSession?.end();
+    this.activeSession?.end();
+    window.location.reload();
   }
 }

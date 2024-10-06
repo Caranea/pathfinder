@@ -49,9 +49,7 @@
                   d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z"
                 />
               </svg>
-              {{
-                'nav.action' | translate
-              }}
+              {{ 'nav.action' | translate }}
             </button>
           </div>
           <div class="w-full max-w-lg lg:max-w-xs">
@@ -79,9 +77,7 @@
                 id="search"
                 name="search"
                 class="block w-full rounded-md border-0 bg-gray-700 py-1.5 pl-10 pr-3 text-gray-300 placeholder:text-gray-400 focus:bg-white focus:text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
-                placeholder="{{
-                  'nav.search' | translate
-                }}"
+                placeholder="{{ 'nav.search' | translate }}"
                 type="search"
                 required
                 [(ngModel)]="searchInput"
@@ -280,11 +276,23 @@
       <div class="border-t border-gray-700 pb-3 pt-4">
         <div class="flex items-center px-5">
           <div class="flex-shrink-0">
+            @if (user?.imageUrl){
             <img
-              class="h-10 w-10 rounded-full"
+              class="h-8 w-8 rounded-full"
               [src]="user?.imageUrl"
               alt="Profile Image"
-            />
+            />} @else {
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              class="h-8 w-8 p-1"
+              fill="rgb(156 163 175)"
+            >
+              <path
+                d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"
+              />
+            </svg>
+            }
           </div>
           <div class="ml-3">
             <div
@@ -321,6 +329,7 @@
             </svg>
           </button>
         </div>
+        @if (user) {
         <div class="mt-3 space-y-1 px-2">
           <a
             href="#"
@@ -338,6 +347,20 @@
             >{{ 'nav.sign_out' | translate }}</a
           >
         </div>
+        } @else {
+          <div class="mt-3 space-y-1 px-2">
+            <a
+              routerLink="/auth/register"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+              >{{ 'nav.register' | translate }}</a
+            >
+            <a
+              routerLink="/auth/login"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+              >{{ 'nav.sign_in' | translate }}</a
+            >
+        </div>
+        }
       </div>
     </div>
   </nav>
