@@ -23,7 +23,7 @@ You'll be able to easily integrate new services, reuse configs and tools that ar
   - Utilizes both modules for integral parts of the app and standalone components where needed
   - Tailwind UI
   - NGRX store configured with example usage shown in `./apps/pathfinder-client/src/app/feature/auth/data-access/store`
-  - Auth system (login, register, confirm, reset password) implemented with Clerk and integrated with DB using a webhook
+  - Auth system implemented with Clerk and integrated with DB using a webhook
   - Sentry configuration for error reporting
   - Internalization with ngx-translate
   - Handy universal components: nav, notification, empty-state implemented
