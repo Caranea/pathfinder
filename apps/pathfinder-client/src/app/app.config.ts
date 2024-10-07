@@ -53,7 +53,7 @@ export const appConfig: ApplicationConfig = {
       traceLimit: 75,
     }),
     importProvidersFrom(TranslateModule.forRoot({
-      defaultLanguage: 'pl',
+      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,

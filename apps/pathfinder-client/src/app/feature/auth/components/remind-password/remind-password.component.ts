@@ -6,7 +6,6 @@ import { ReactiveFormService } from 'apps/pathfinder-client/src/app/shared/featu
 import { NotificationService } from 'apps/pathfinder-client/src/app/shared/features/notification/service/notification.service';
 import { Router } from '@angular/router';
 import { ClerkService } from '../../data-access/services/clerk.service';
-import { AuthFacade } from '../../data-access/store/auth.facade';
 
 @Component({
   selector: 'app-remind-password',

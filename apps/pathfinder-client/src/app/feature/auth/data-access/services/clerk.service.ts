@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Clerk } from '@clerk/clerk-js';
-import { plPL } from '@clerk/localizations';
+import { enUS } from '@clerk/localizations';
 import { SessionResource, UserResource, GoogleOauthProvider, FacebookOauthProvider } from '@clerk/types';
 import { BehaviorSubject } from 'rxjs';
 
@@ -25,7 +25,7 @@ export class ClerkService {
     return !!this.activeSession?.user;
   }
 
-  async load(apiKey: string, language = plPL) {
+  async load(apiKey: string, language = enUS) {
     if (this.clerk) {
       return;
     }

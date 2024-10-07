@@ -1,0 +1,73 @@
+{
+    "shared": {
+        "title": "Pathfinder",
+        "generic_error": "Error! Please try again."
+    },
+    "home": {
+        "cta": "Your app could be here"
+    },
+    "notification": {
+        "failure": "Error!",
+        "success": "Success!"
+    },
+    "nav": {
+        "home": "Home",
+        "example": "Page 2",
+        "action": "Action",
+        "search": "Search",
+        "open_main_menu":"Open main menu",
+        "view_notifications": "View notifications",
+        "open_user_menu": "Open user menu",
+        "your_profile": "Your profile",
+        "settings": "Settings",
+        "sign_out": "Sign out",
+        "register": "Register",
+        "sign_in": "Sign in"
+    },
+    "auth": {
+        "remind_password": "Reset your password",
+        "login_successful": "Logged in successfully.",
+        "continue_with": "Or continue with",
+        "identifier": "Username or email",
+        "register_account": "Create a new account",
+        "email": "Email",
+        "password": "Password",
+        "reset_password": "Forgot password?",
+        "already_registered": "Already have an account?",
+        "log_in": "Log in",
+        "username": "Username",
+        "sign_up": "Sign up",
+        "code": "Code",
+        "send": "Send",
+        "reset": "Reset",
+        "confirm": "Confirm",
+        "email_not_arrived": "Email not arrived?",
+        "confirm_registration": "Verify your email address",
+        "code_not_arrived": "Code not arrived?",
+        "no_acc_yet": "Don't have an account yet?",
+        "try_again": "Try again",
+        "error_preparing_verification": "Error preparing verification code",
+        "error_attempting_verification": "Error attempting verification code",
+        "code_sent": "Code sent. Check your email inbox",
+        "verified_success": "Success! You will be redirected to the home page shortly.",
+        "validation": {
+            "form_code_incorrect": "Incorrect code",
+            "strategy_for_user_invalid": "Use a different login method",
+            "external_account_exists": "This account is already registered. Please log in",
+            "form_param_nil": "This field is required",
+            "required": "This field is required",
+            "form_username_invalid_character": "Username can only contain numbers, letters, '_', or '-'",
+            "form_password_length_too_short": "Password must be at least 8 characters long",
+            "form_identifier_exists": "User already exists",
+            "form_password_pwned": "This password has been compromised",
+            "form_param_format_invalid": "Use a valid format",
+            "session_exists": "You are already logged in",
+            "sign_up_outdated_verification": "This verification has expired",
+            "sign_up_cannot_be_updated": "This sign-up attempt cannot be modified",
+            "sign_up_forbidden_access": "Registration forbidden",
+            "sign_up_not_found": "Cannot find current sign-up attempt",
+            "form_password_incorrect": "Incorrect password",
+            "form_identifier_not_found": "Cannot find such user"
+        }
+    }
+}
