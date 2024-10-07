@@ -36,6 +36,7 @@ You'll be able to easily integrate new services, reuse configs and tools that ar
 4. Start the server `nx run pathfinder:serve`
 5. Start the client `nx run pathfinder-client:serve`
 6. Go to `localhost:4200`
+7. Integrate your features
 
 ## Run tasks
 
