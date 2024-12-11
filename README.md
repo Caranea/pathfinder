@@ -33,10 +33,12 @@ You'll be able to easily integrate new services, reuse configs and tools that ar
 1. Clone the application
 2. Install docker
 3. Run `docker-compose up` from the app directory
-4. Start the server `nx run pathfinder:serve`
-5. Start the client `nx run pathfinder-client:serve`
-6. Go to `localhost:4200`
-7. Integrate your features
+4. Install dependencies
+5. Add env variables to .env file
+6. Start the server `nx run pathfinder:serve`
+7. Start the client `nx run pathfinder-client:serve`
+8. Go to `localhost:4200`
+9. Integrate your features
 
 ## Run tasks
 
